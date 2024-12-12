@@ -73,19 +73,6 @@ main {
     width: 90%;
 }
 
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255, 253, 253, 0.411);
-    color: rgb(133, 0, 0);
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
 
 footer {
     position: fixed;
@@ -135,26 +122,50 @@ video{
 }
 
 .modal-content {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 800px;
-    width: 90%;
-    max-height: 90%;
-    overflow: auto;
+    background: rgb(167, 167, 167);
+    color: black;
+    padding: 0.75rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    max-width: 700px;
+    width: 1500%;
 }
 
-.modal .close-btn {
+.close-btn {
     position: absolute;
-    top: 10px; /* Ajusta la posición según sea necesario */
-    right: 10px; /* Ajusta la posición según sea necesario */
+    top: 10px;
+    right: 10px;
     background: rgba(255, 255, 255, 0.8);
-    color: rgb(253, 0, 0);
-    border: none; /* Elimina el borde para probar */
+    color: rgb(133, 0, 0);
+    border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+.modal-content .close-btn {
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(133, 0, 0);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1001;
 }
 
+
+.close-btn:hover {
+    background: red;
+    color: white;
+}
