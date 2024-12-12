@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadistica</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleContent(parcial) {
+            const content = document.getElementById(parcial);
+            content.style.display = content.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function closePopup(parcial) {
+            const content = document.getElementById(parcial);
+            content.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Proyectos estadistica</h1>
+    </header>
+    <main id="hero">
+        <div class="parcial" onclick="toggleContent('parcial1')">
+            <h2>1er Parcial</h2>
+        </div>
+
+        <div class="parcial" onclick="toggleContent('parcial2')">
+            <h2>2do Parcial</h2>
+        </div>
+
+        <div class="parcial" onclick="toggleContent('parcial3')">
+            <h2>3er Parcial</h2>
+        </div>
+        <video muted autoplay loop> 
+            <source src="./Imagenes/Dangan3Win 2017-10-11 22-28-02-264.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+        <div id="parcial1" class="popup">
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopup('parcial1')">&times;</button>
+                <ul class="indice">
+                    <li><a href="" target="_blank">Video informativo</a></li>
+                    <li><a href="" target="_blank">Video educativo</a></li>
+                    <li><a href="" target="_blank">Informe</a></li>
+                    <li><a href="" target="_blank">Yankuam Mashumbra</a></li>
+                    <li><a href="" target="_blank">Danny Jimenez</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="parcial2" class="popup">
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopup('parcial2')">&times;</button>
+                <p>Proximamente...</p>
+            </div>
+        </div>
+        <div id="parcial3" class="popup">
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopup('parcial3')">&times;</button>
+                <p>Proximamente...</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Yanyrma</p>
+    </footer>
+</body>
+</html>
