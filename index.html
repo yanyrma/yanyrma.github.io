@@ -15,25 +15,30 @@
             const content = document.getElementById(parcial);
             content.style.display = 'none';
         }
+
         function openModal(contentType, contentPath) {
             const modal = document.getElementById("modal");
             const modalContent = document.getElementById("modal-content");
 
             if (contentType === "video") {
-                modalContent.innerHTML = `<video controls autoplay style="width: 100%; height: auto;">
-                                            <source src="${contentPath}" type="video/mp4">
-                                            Tu navegador no soporta la reproducción de videos.
-                                          </video>`;
+                modalContent.innerHTML = `
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <video controls autoplay style="width: 100%; height: auto;">
+                    <source src="${contentPath}" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                    </video>`;
             } else if (contentType === "pdf") {
-                modalContent.innerHTML = `<iframe src="${contentPath}" style="width: 100%; height: 80vh;" frameborder="0"></iframe>`;
+                modalContent.innerHTML = `
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <iframe src="${contentPath}" style="width: 100%; height: 80vh;" frameborder="0"></iframe>`;
             }
 
             modal.style.display = "flex";
         }
 
         function closeModal() {
-            const modal = document.getElementById("modal");
-            modal.style.display = "none";
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
         }
     </script>
 </head>
@@ -64,7 +69,7 @@
                     <li><a href="#" onclick="openModal('video', './imagenes/video_informativo.mp4')">Video informativo</a></li>
                     <li><a href="#" onclick="openModal('video', './imagenes/video_educativo.mp4')">Video educativo</a></li>
                     <li><a href="#" onclick="openModal('pdf', './imagenes/informe.pdf')">Informe</a></li>
-                    <li><a href="" target="_blank">Yankuam Mashumbra</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/10WCRu9hLTwjsM21ysul3UVvkcZIdJqP0?usp=sharing" target="_blank">Yankuam Mashumbra</a></li>
                     <li><a href="" target="_blank">Danny Jimenez</a></li>
                 </ul>
             </div>
@@ -88,7 +93,7 @@
     </footer>
     <div id="modal" class="modal">
         <div id="modal-content" class="modal-content">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <button class="close-btn" onclick="closePopup('parcial1')">&times;</button>
         </div>
     </div>
 </body>
