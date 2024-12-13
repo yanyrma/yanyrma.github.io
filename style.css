@@ -29,6 +29,8 @@ main {
 .parcial {
     width: 200px;
     height: 150px;
+    font-size: 1.7rem;
+    font-weight: bold;
     background-color: transparent;
     color: rgb(255, 255, 255);
     display: flex;
@@ -76,12 +78,14 @@ main {
 
 footer {
     position: fixed;
+    font-size: 0.7rem;
+    text-align: right;
+    padding-right: 5rem;
     bottom: 0;
     width: 100%;
-    text-align: center;
     background: #000000;
-    color: white;
-    padding: 1rem 0;
+    color: rgb(255, 255, 255);
+    padding: 2rem 0;
 }
 
 #hero {
@@ -104,7 +108,7 @@ video{
     width: 100%;
     height: 100%;
     background: #000000;
-    opacity: 0;
+    opacity: 0.7    ;
     mix-blend-mode: overlay;
      
 }
@@ -137,23 +141,23 @@ video{
     position: absolute;
     top: 10px;
     right: 10px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8); /* Mejora el contraste */
     color: rgb(133, 0, 0);
     border: none;
     border-radius: 50%;
-    width: 40px;
+    width: 40px; /* Aumentamos el tamaño */
     height: 40px;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1001; 
+    z-index: 1001; /* Aseguramos que esté al frente */
 }
 
 .modal-content .close-btn {
     position: absolute;
     top: 55px;
     right: 15px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8); /* Botón visible */
     color: rgb(133, 0, 0);
     border: none;
     border-radius: 50%;
